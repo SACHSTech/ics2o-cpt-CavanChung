@@ -1,10 +1,14 @@
+import random
+
 player_health = 0
 stamina = 0
 boss_health = 1000
+damage = 0
 
 done = False 
 
 print("******Game******")
+
 
 print("Choose your class")
 
@@ -31,8 +35,9 @@ counter = 0
 dash = 0
 bladestorm = 0
 
+
 #player loop mage
-while player_class == 1:
+if player_class == 1:
   player_health = 0
   stamina = 0
   drain_touch = drain_touch + 1
@@ -43,7 +48,7 @@ while player_class == 1:
   player_class = player_class - 1
   turn_count = 1
 
-  #
+  #if turn_count = 1 then player loop starts, if turn_count = 0 then boss loop starts
   while turn_count == 1:
     #takes skill number as input
     if explosion > 10:
@@ -72,6 +77,7 @@ while player_class == 1:
         print("Boss Health: "+ str(boss_health))
       else:
         print("Invalid")
+        print("You did zero damage")
 
     #takes skill number as input
     else:
@@ -86,7 +92,7 @@ while player_class == 1:
       explosion = explosion + 1
       player_choice = int(input("Enter the Skill Number: "))
 
-      #based on skill number it will deal take away a certain amount of boss_health or inflict a status effect. After a skill is played the turn_count will go to zero and the boss loop will play      #based on skill number it will deal take away a certain amount of boss_health or inflict a status effect. After a skill is played the turn_count will go to zero and the boss loop will play
+      #based on skill number it will deal take away a certain amount of boss_health or inflict a status effect. After a skill is played the turn_count will go to zero and the boss loop will play
       if player_choice == 1:
         print("Boss Health: "+ str(boss_health))
       elif player_choice == 2:
@@ -97,10 +103,11 @@ while player_class == 1:
         print("Boss Health: "+ str(boss_health))
       else:
         print("Invalid")
+        print("You did zero damage")
 
 
 #player loop brawler
-while player_class == 2:
+if player_class == 2:
   player_health = 0
   stamina = 0
   sasageyo + sasageyo + 1
@@ -141,6 +148,7 @@ while player_class == 2:
         print("Boss Health: "+ str(boss_health))
       else:
         print("Invalid")
+        print("You did zero damage")
 
     #takes skill number as input    
     else: 
@@ -166,9 +174,12 @@ while player_class == 2:
         print("Boss Health: "+ str(boss_health))
       else:
         print("Invalid")
+        print("You did zero damage")
+    
+
 
 #player loop rogue
-while player_class == 3:
+if player_class == 3:
   player_health = 0
   stamina = 0
   steal = steal + 1
@@ -179,6 +190,7 @@ while player_class == 3:
   player_class = player_class - 3
   turn_count = 1
 
+  #if turn_count = 1 then player loop starts, if turn_count = 0 then boss loop starts
   while turn_count == 1:
 
     #takes skill number as input
@@ -208,6 +220,7 @@ while player_class == 3:
         print("Boss Health: "+ str(boss_health))
       else:
         print("Invalid")
+        print("You did zero damage")
 
     #takes skill number as input
     else: 
@@ -233,40 +246,8 @@ while player_class == 3:
         print("Boss Health: "+ str(boss_health))
       else:
         print("Invalid")
+        print("You did zero damage")
 
-
-if drain_touch >= 1:
-  print("Skill 1: Drain Touch")
-elif heal >= 1:
-  print("Skill 2: Heal")
-elif vine_whip >= 1:
-  print("Skill 3: Vine Whip")
-elif ice_wall >= 1:
-  print("Skill 4: Ice Wall")
-elif explosion >= 1:
-  print("Skill 5: EXPLOSION!!!!!!!!!!!")
-
-if sasageyo >= 1:
-  print("Skill 1: Sasageyo!")
-elif smack >= 1:
-  print("Skill 2: Smack")
-elif muda_barrage >= 1:
-  print("Skill 3: Muda Barrage")
-elif block >= 1:
-  print("Skill 4: Block")
-elif za_warudo >= 1:
-  print("Skill 5: ZA WARUDO")
-
-if steal >= 1:
-  print("Skill 1: Steal")
-elif quick_cut >= 1:
-  print("Skill 2: Quick Cut")
-elif counter >= 1:
-  print("Skill 3: Counter")
-elif dash >= 1:
-  print("Skill 4: Dash")
-elif bladestorm >= 1:
-  print("Skill 5: Bladestorm")
 
 
 
