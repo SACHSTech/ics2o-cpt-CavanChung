@@ -10,10 +10,10 @@ print("******Attack on Virus******")
 
 print("Tips:")
 print("- REMEMBER THERE ARE COOLDOWNS")
-print("Explore the different classes, some mechanics I added were damage based on health lost, stun,etc.")
+print("Explore the different classes, some mechanics I added include damage based on health lost, stun,etc.")
 print("- Block, stun, and extremely high damage skills have a cooldown of 3 or more turns so don't use them at the start of the game and don't go spamming them...")
 print("- At turn 10 or by using specific skills an ultimate skill will be available. It will appear in the skill list.")
-print("-SOME SKILLS START ON COOLDOWN!!!!!")
+print("- USE SKILL 1 FOR A FEW TURNS UNTIL THE REST OF THE COOLDOWNS FOR SKILLS 2-5 ARE GONE!!!!!")
 print("- It's a fast moving text game make to read it all to avoid confusion")
 
 print("CHOOSE YOUR CLASS")
@@ -64,6 +64,7 @@ if player_class == 1:
         player_choice_explosion = int(input("Enter the Skill Number: "))
 
 
+
         #based on skill number it will deal take away a certain amount of boss_health or inflict a status effect. After a skill is played the turn_count will go to zero and the boss loop will play
         if player_choice_explosion == 1 and drain_touch >= 1:
           boss_health = boss_health - 25
@@ -74,6 +75,7 @@ if player_class == 1:
           print("Player Health: "+ str(player_health))
           drain_touch = drain_touch - drain_touch
           turn_count = turn_count - 1
+
 
 
         elif player_choice_explosion == 2 and heal >= 3:
@@ -261,13 +263,11 @@ elif player_class == 2:
 
   while done == False:
 
-
-
     #if turn_count = 1 then player loop starts, if turn_count = 0 then boss loop starts
     while turn_count >= 1:
 
       #takes skill number as input 
-      if za_warudo == 10:
+      if za_warudo >= 10:
         print("Skill 1: Sasageyo!")
         print("Skill 2: Smack")
         print("Skill 3: Muda Barrage")
@@ -352,7 +352,6 @@ elif player_class == 2:
           print("You gained reduced ultimate skill cooldown by one")
           za_warudo = za_warudo + 1
           print("Boss Health: "+ str(boss_health))
-          sasageyo = sasageyo - sasageyo
           turn_count = turn_count - 1
 
 
@@ -400,11 +399,11 @@ elif player_class == 2:
     while turn_count <= 0:
 
       #Reduce the skill cooldown to make the skills usable
-      sasageyo + sasageyo + 1
-      smack + smack + 1
-      muda_barrage + muda_barrage + 1
-      block + block + 1
-      za_warudo + za_warudo + 1
+      sasageyo = sasageyo + 1
+      smack = smack + 1
+      muda_barrage = muda_barrage + 1
+      block = block + 1
+      za_warudo = za_warudo + 1
 
 
       #picks random skill
